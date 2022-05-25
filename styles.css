@@ -12,9 +12,11 @@ body div {
 }
 
 .boxes{
+    flex-shrink: 0;
     background-color: gray;
+    transition: .3s;
 }
 
-.boxes:hover {
-    background-color: blue;
+.hover {
+    background-color: black;
 }

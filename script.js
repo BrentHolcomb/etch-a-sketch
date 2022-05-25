@@ -8,7 +8,6 @@ function grid() {
 
     for (let i = 0; i < 16; i++) {
         rowCln = row.cloneNode(true);
-        console.log(rowCln);
 
         for (let i = 0; i < 16; i++) {
             tileCln = tile.cloneNode(true);
@@ -25,4 +24,26 @@ function grid() {
     }
 }
 
+let boxNumber = 16;
+
+
 grid();
+
+// add class on mouseover, remove class on mouseout for each tile
+let selectedRow;
+for (let i = 1; i <= boxNumber; i++) {
+    // add unique ID to each row
+    selectedRow = document.querySelector(`.rows:nth-child(${i})`);
+    selectedRow.setAttribute("id", `row${i}`);
+
+    // add event listener for each tile in row
+    for (let n = 1; n <= boxNumber; n++) {
+        let hover = document.querySelector(`#row${i} div:nth-child(${n})`);
+        hover.addEventListener("mouseover", () => {
+            hover.classList.add("hover");
+        });
+        hover.addEventListener("mouseout", () => {
+            hover.classList.remove("hover");
+        });
+    }
+}
