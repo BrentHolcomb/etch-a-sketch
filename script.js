@@ -6,16 +6,16 @@ function grid() {
     let rowCln;
     let tileCln;
 
-    for (let i = 0; i < 16; i++) {
+    for (let i = 0; i < boxNumber; i++) {
         rowCln = row.cloneNode(true);
 
-        for (let i = 0; i < 16; i++) {
+        for (let i = 0; i < boxNumber; i++) {
             tileCln = tile.cloneNode(true);
 
             // append tile clone, set class and dimensions
             rowCln.appendChild(tileCln);
             tileCln.classList.add("boxes");
-            tileCln.style = "height: 2.8em; width: 2.8em;";
+            tileCln.style = `height: ${tileSize}em; width: ${tileSize}em;`;
         }
 
         // append row and add class
@@ -25,7 +25,7 @@ function grid() {
 }
 
 let boxNumber = 16;
-
+let tileSize = 45 / boxNumber;
 
 grid();
 
