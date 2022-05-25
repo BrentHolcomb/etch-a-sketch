@@ -5,17 +5,16 @@ body div {
     justify-content: center;
 }
 
-/* rows */
-body div div {
+.rows {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-/* boxes */
-div div div{
-    height: 2em;
-    width: 2em;
+.boxes{
+    background-color: gray;
+}
+
+.boxes:hover {
     background-color: blue;
-    margin: .5em;
 }

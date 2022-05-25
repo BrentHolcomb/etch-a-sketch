@@ -12,10 +12,16 @@ function grid() {
 
         for (let i = 0; i < 16; i++) {
             tileCln = tile.cloneNode(true);
+
+            // append tile clone, set class and dimensions
             rowCln.appendChild(tileCln);
+            tileCln.classList.add("boxes");
+            tileCln.style = "height: 2.8em; width: 2.8em;";
         }
 
+        // append row and add class
         boundary.appendChild(rowCln);
+        rowCln.classList.add("rows");
     }
 }
 
