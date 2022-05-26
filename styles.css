@@ -2,7 +2,8 @@
 body div {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+
 }
 
 .rows {
@@ -14,9 +15,53 @@ body div {
 .boxes{
     flex-shrink: 0;
     background-color: gray;
-    transition: .3s;
+    transition: .7s;
+    transition-timing-function: ease-out;
 }
 
 .hover {
     background-color: black;
+}
+
+.entry {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: .5em 0;
+}
+
+input {
+    margin: 0;
+    padding: 1em;
+    width: 45em;
+}
+
+button {
+    margin: 0;
+    padding: 1em;
+    white-space: nowrap;
+}
+
+.color0 {
+    background-color: rgb(255, 121, 121);
+}
+
+.color1 {
+    background-color: lightblue;
+}
+
+.color2 {
+    background-color: rgb(255, 255, 158);
+}
+
+.color3 {
+    background-color: rgb(255, 218, 151);
+}
+
+.color4 {
+    background-color: rgb(255, 147, 255);
+}
+
+.color5 {
+    background-color: rgb(153, 253, 153);
 }
